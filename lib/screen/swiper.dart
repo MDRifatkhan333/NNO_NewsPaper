@@ -15,9 +15,10 @@ class Example extends StatelessWidget {
           cardsBuilder: (BuildContext context, int index) {
             return Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  color: Color.fromARGB(255, 150, 151, 151),
-                ),
+                    borderRadius: BorderRadius.circular(40),
+                    color: Color(
+                      0xffFFF2C5,
+                    )),
                 //alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -34,13 +35,95 @@ class Example extends StatelessWidget {
                             borderRadius: BorderRadius.circular(40),
                             color: Colors.red,
                           ),
-                          child: Text(
+                          child: const Text(
                             'LIVE',
                             style: TextStyle(
                               fontSize: 15,
                               color: Colors.white,
                               fontWeight: FontWeight.w900,
                             ),
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "Demand for Dhaka Generic drugs Skyrockets in...",
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "Update time",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 105, 103, 103),
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 10,
+                            ),
+                            child: Row(
+                              children: [
+                                const CircleAvatar(child: Icon(Icons.man)),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'published by',
+                                        style: TextStyle(
+                                          fontSize: 13,
+                                          color: Color.fromARGB(
+                                              255, 105, 103, 103),
+                                        ),
+                                      ),
+                                      Text(
+                                        'RIFAT',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Follow',
+                                  )),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                          style: TextStyle(
+                            fontSize: 18,
                           ),
                         ),
                       ),
