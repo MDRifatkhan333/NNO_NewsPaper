@@ -17,9 +17,7 @@ class _NewsCardState extends State<NewsCard> {
       // color: Colors.white,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40),
-        color: const Color(
-          0xffFFF2C5,
-        ),
+        color: Colors.white,
       ),
       child: Padding(
         padding: const EdgeInsets.only(top: 80, bottom: 80, left: 8, right: 8),
@@ -33,23 +31,51 @@ class _NewsCardState extends State<NewsCard> {
               stops: [0.5, 1.0],
             ),
           ),
-          child: Container(
-              child: Column(
-            children: [
-              Spacer(),
-              const Text('hello world',
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    letterSpacing: 0.5,
-                  )),
-              TextButton(onPressed: () {}, child: Text('read more')),
-              SizedBox(
-                height: 10,
-              )
-            ],
-          )),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Spacer(),
+                const Text('News title / headline goes here ',
+                    style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 0.5,
+                    )),
+                Row(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Read More',
+                        style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Icon(
+                        Icons.share,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
