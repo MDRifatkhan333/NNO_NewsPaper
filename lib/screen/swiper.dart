@@ -15,10 +15,11 @@ class Example extends StatelessWidget {
           cardsBuilder: (BuildContext context, int index) {
             return Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Color(
-                      0xffFFF2C5,
-                    )),
+                  borderRadius: BorderRadius.circular(40),
+                  color: Color(
+                    0xffFFF2C5,
+                  ),
+                ),
                 //alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -57,6 +58,8 @@ class Example extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Center(
+                          child: CircleAvatar(child: Text(index.toString()))),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
@@ -121,7 +124,7 @@ class Example extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                          "is simply dummy textry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
                           style: TextStyle(
                             fontSize: 18,
                           ),
