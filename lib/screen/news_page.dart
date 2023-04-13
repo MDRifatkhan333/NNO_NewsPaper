@@ -23,14 +23,20 @@ class _NewsCardState extends State<NewsCard> {
         padding: const EdgeInsets.only(top: 80, bottom: 80, left: 8, right: 8),
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            gradient: const LinearGradient(
-              colors: [Colors.transparent, Colors.black],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              stops: [0.5, 1.0],
-            ),
-          ),
+              borderRadius: BorderRadius.circular(20),
+              gradient: const LinearGradient(
+                colors: [Color(0x003f51b5), Color(0xe0000000)],
+                stops: [0.5, 1],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              )
+              // gradient: const LinearGradient(
+              //   colors: [Colors.transparent, Colors.black],
+              //   begin: Alignment.topCenter,
+              //   end: Alignment.bottomCenter,
+              //   stops: [0.5, 1.0],
+              // ),
+              ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
