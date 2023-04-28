@@ -1,6 +1,7 @@
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class MyNewsPaperCard extends StatefulWidget {
   const MyNewsPaperCard({super.key});
@@ -27,17 +28,15 @@ class _MyNewsPaperCardState extends State<MyNewsPaperCard> {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/Untitled.jpeg'),
+                  image: DecorationImage(
+                    image: FadeInImage.assetNetwork(
+                      placeholder: 'assets/load.jpg',
+                      image: 'https://i.ibb.co/wKH1h0T/Code-typing-rafiki.png',
+                      fit: BoxFit.cover,
+                    ).image,
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(20),
-                  gradient: const LinearGradient(
-                    colors: [Color(0x003f51b5), Color(0xe0000000)],
-                    stops: [0.5, 1],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
                 ),
                 child: Container(
                   decoration: const BoxDecoration(
