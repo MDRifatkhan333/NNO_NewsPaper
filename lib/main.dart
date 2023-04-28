@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nno_newspaper/screen/homepage.dart';
+import 'package:nno_newspaper/screen/newsPaperCard.dart';
 import 'package:nno_newspaper/screen/news_page.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NewsCard(),
+      home: const MyNewsPaperCard(),
     );
   }
 }

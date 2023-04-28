@@ -5,7 +5,6 @@ import 'package:flutter/src/widgets/placeholder.dart';
 
 class NewsCard extends StatefulWidget {
   const NewsCard({super.key});
-
   @override
   State<NewsCard> createState() => _NewsCardState();
 }
@@ -14,7 +13,6 @@ class _NewsCardState extends State<NewsCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.white,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40),
         color: Colors.white,
@@ -42,7 +40,15 @@ class _NewsCardState extends State<NewsCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Spacer(),
+                const Center(
+                  child: Image(
+                    height: 400,
+                    width: double.infinity,
+                    image: AssetImage('assets/images/1.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                const Spacer(),
                 const Text('News title / headline goes here ',
                     style: TextStyle(
                       decoration: TextDecoration.none,
@@ -77,7 +83,7 @@ class _NewsCardState extends State<NewsCard> {
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 )
               ],
             ),

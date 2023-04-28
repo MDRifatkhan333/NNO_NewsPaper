@@ -16,7 +16,7 @@ class Example extends StatelessWidget {
             return Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  color: Color(
+                  color: const Color(
                     0xffFFF2C5,
                   ),
                 ),
@@ -59,7 +59,10 @@ class Example extends StatelessWidget {
                         ),
                       ),
                       Center(
-                          child: CircleAvatar(child: Text(index.toString()))),
+                        child: CircleAvatar(
+                          child: Text(index.toString()),
+                        ),
+                      ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
