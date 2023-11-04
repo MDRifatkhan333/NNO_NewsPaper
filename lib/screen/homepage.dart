@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nno_newspaper/screen/swiper.dart';
+import 'package:nno_newspaper/widgets/mainBottomNavBar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -66,9 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 10),
+            const SwiperScreen(),
           ],
         ),
       ),
+      bottomNavigationBar: const mainBottomNavBar(),
     );
   }
 }

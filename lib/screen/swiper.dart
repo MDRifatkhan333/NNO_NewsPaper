@@ -2,13 +2,15 @@ import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Example extends StatelessWidget {
+class SwiperScreen extends StatelessWidget {
+  const SwiperScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.black,
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.65,
+        height: MediaQuery.of(context).size.height * 0.73,
         width: MediaQuery.of(context).size.width,
         child: AppinioSwiper(
           cardsCount: 10,
