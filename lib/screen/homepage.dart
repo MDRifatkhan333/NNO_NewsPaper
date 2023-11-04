@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nno_newspaper/screen/swiper.dart';
-
-import 'newsPaperCard.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -21,9 +18,6 @@ class _MyHomePageState extends State<MyHomePage> {
     'finance',
     'Item 6',
     'Item 7',
-    'Item 8',
-    'Item 9',
-    'Item 10',
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,30 +25,14 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: const Row(
-          children: [
-            CircleAvatar(
-              radius: 16,
-              backgroundColor: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  'Z',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(width: 5),
-            Text('News'),
-          ],
+        title: Image.asset(
+          'assets/images/NNO_NEWS_logo.png',
+          height: 100,
+          width: 150,
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.all_inclusive),
+            icon: const Icon(Icons.dashboard_outlined),
             onPressed: () {},
           ),
         ],
@@ -62,11 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 10),
+            const SizedBox(
+              height: 10,
+            ),
             SizedBox(
               height: 50,
               child: ListView.builder(
-                itemCount: 10,
+                itemCount: newsitemlist.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) => Container(
                   //color: Colors.red,
@@ -86,7 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 10),
-            //const MyNewsPaperCard(),
           ],
         ),
       ),

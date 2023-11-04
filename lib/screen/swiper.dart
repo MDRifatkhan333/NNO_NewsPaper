@@ -78,19 +78,19 @@ class Example extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
+                          const Padding(
+                            padding: EdgeInsets.only(
                               left: 10,
                             ),
                             child: Row(
                               children: [
-                                const CircleAvatar(child: Icon(Icons.man)),
+                                CircleAvatar(child: Icon(Icons.man)),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 10),
+                                  padding: EdgeInsets.only(left: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: const [
+                                    children: [
                                       Text(
                                         'published by',
                                         style: TextStyle(
