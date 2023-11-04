@@ -1,7 +1,6 @@
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:transparent_image/transparent_image.dart';
 
 class MyNewsPaperCard extends StatefulWidget {
   const MyNewsPaperCard({super.key});

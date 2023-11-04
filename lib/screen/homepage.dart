@@ -31,8 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Row(
-          children: const [
+        title: const Row(
+          children: [
             CircleAvatar(
               radius: 16,
               backgroundColor: Colors.white,
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 10),
-            const MyNewsPaperCard(),
+            //const MyNewsPaperCard(),
           ],
         ),
       ),
