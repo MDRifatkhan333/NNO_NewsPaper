@@ -18,8 +18,7 @@ class _MyNewsPaperCardState extends State<MyNewsPaperCard> {
         // height: MediaQuery.of(context).size.height * 0.65,
         // width: MediaQuery.of(context).size.width,
         child: AppinioSwiper(
-          cardsCount: 20,
-          cardsBuilder: (BuildContext context, int index) {
+          cardBuilder: (BuildContext context, int index) {
             return Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
@@ -84,7 +83,7 @@ class _MyNewsPaperCardState extends State<MyNewsPaperCard> {
                                 ),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             ElevatedButton(
                               onPressed: () {},
                               child: Icon(
@@ -104,6 +103,7 @@ class _MyNewsPaperCardState extends State<MyNewsPaperCard> {
               ),
             );
           },
+          cardCount: 20,
         ),
       ),
     );
